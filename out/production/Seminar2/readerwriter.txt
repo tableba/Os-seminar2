@@ -1,0 +1,2 @@
+Writers and readers access the shared data at the same time randomly.
+There needs to be a lock.
