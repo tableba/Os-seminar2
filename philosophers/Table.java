@@ -19,8 +19,12 @@ public class Table {
 	}
 
 	public synchronized void getLeftChopstick(int n) {
+		int pos = n + 1;
+		if (pos == nbrOfChopsticks)
+			pos = 0;
+
 		try {
-			while (!chopstick[n]) {
+			while (!chopstick[n] && !chopstick[pos]) {
 				wait();
 			}
 
